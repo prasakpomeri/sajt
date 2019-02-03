@@ -1,1 +1,110 @@
-<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <link rel="stylesheet" href="/style.10208e95.css"> <title>Prašak po meri</title> </head> <body class="bg-color-green"> <div class="container-fluid"> <div class="row">  <div class="header col-12"> <div class="content-wrapper d-flex flex-column bg-white justify-content-between"> <div class="social-buttons-wrapper w-100 d-flex justify-content-center ">  <div class="social-buttons w-25 d-flex justify-content-around  bg-white m-3">  <span class="fa-stack fa-1x"> <i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i> </span>  <span class="fa-stack fa-1x"> <i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i> </span>  <span class="fa-stack fa-1x"> <i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-instagram fa-stack-1x fa-inverse"></i> </span> </div> </div>  <div class="main"> <div class="main-content position-relative d-flex justify-content-center align-items-center h-100"> <img class="spinning" src="https://static.wixstatic.com/media/84770f_13f75e5721234d63894730205cb1c4c3~mv2.gif" alt="laundry"> <h1>prašak po meri</h1> </div> </div>  <div class="d-flex justify-content-center align-items-center"> <span class="text-black"> <i class="fas fa-angle-down fa-3x "></i> </span> </div> </div> </div>  </div>  <div class="row"> <form class="laundry-form col-12" action="" id="laundry-form">  <div class="form-group laundry-step"> <label class="h4" for="vrstaTkanine"> Unesite vrstu tkanine </label> <input class="form-control" type="text" name="vrstaTkanine" id="vrstaTkanine" required placeholder="Vrsta tkanine"> <small class="form-text"> Ovde unosite vrstu tkanine za koju želite da nadjete najodgovarajući prašak kako bi ona ostala sveža, očuvana i blistava. </small> </div>  <div class="form-group laundry-step"> <label class="h4" for="sadrzajTkanine"> Unesite procentualni sadržaj tkanine u komadu odeće </label> <input class="form-control" type="number" min="0" max="100" step="5" name="sadrzajTkanine" id="sadrzajTkanine" required placeholder="Procentualni sadržaj tkanine u komadu odeće"> <small class="form-text"> Ovde unosite količinu tkanine koja je sadržana u komadu odeće, jer na različite količine tkanina utiču različite količine praška. </small> </div>  <div class="form-group laundry-step"> <label class="h4" for="vrstaOdece"> Unesite vrstu komada odeće </label> <input class="form-control" type="text" name="vrstaOdece" id="vrstaOdece" placeholder="Vrsta komada odeće"> <small class="form-text"> Ovde unosite vrstu komada odeće koji sadrži tkaninu koju želite da tretirate najpogodnijim praškom kako bi ostao uvek uz Vas. </small> </div>  <div class="form-group laundry-step"> <label class="h4" for="lokacija"> Unesite grad u kojem živite </label> <input class="form-control" type="text" name="lokacija" id="lokacija" placeholder="Grad" required> <small class="form-text"> Ovde unosite grad u kojem živite kako bi prikazali proizvodi na prodajnim mestima u Vašem gradu. </small> </div> <div class="form-group laundry-step"> <p class="error-message" id="error"></p> <button class="btn btn-primary" id="submit"> Završi </button> </div> </form> </div>    <div class="row"> <div class="product-list d-flex flex-wrap justify-content-center align-items-center flex-grow-1 p-2" id="product-list"> </div> </div>   <div class="row"> <div class="col-12"> <div class="back-to-top d-flex flex-column justify-content-center align-items-center" onclick="window.scrollTo(0,0);"> <span class="text-black"> <i class="fas fa-angle-up fa-6x "></i> </span> <h3>Na vrh</h3> </div> </div> </div>  </div> <script src="/main.06ed658c.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="/sajt/style.10208e95.css">
+    <title>Prašak po meri</title>
+</head>
+
+<body class="bg-color-green">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header col-12">
+                <div class="content-wrapper d-flex flex-column bg-white justify-content-between">
+                    <div class="social-buttons-wrapper w-100 d-flex justify-content-center ">
+                        <div class="social-buttons w-25 d-flex justify-content-around  bg-white m-3"> <span class="fa-stack fa-1x">
+                                <i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span> <span class="fa-stack fa-1x"> <i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span> <span class="fa-stack fa-1x"> <i class="fas fa-circle fa-stack-2x"></i> <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span> </div>
+                    </div>
+                    <div class="main">
+                        <div class="main-content position-relative d-flex justify-content-center align-items-center h-100">
+                            <img class="spinning"
+                                 src="https://static.wixstatic.com/media/84770f_13f75e5721234d63894730205cb1c4c3~mv2.gif"
+                                 alt="laundry">
+                            <h1>prašak po meri</h1>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center"> <span class="text-black"> <i class="fas fa-angle-down fa-3x "></i>
+                        </span> </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <form class="laundry-form col-12"
+                  action=""
+                  id="laundry-form">
+                <div class="form-group laundry-step"> <label class="h4"
+                           for="vrstaTkanine"> Unesite vrstu tkanine </label> <input class="form-control"
+                           type="text"
+                           name="vrstaTkanine"
+                           id="vrstaTkanine"
+                           required
+                           placeholder="Vrsta tkanine"> <small class="form-text"> Ovde unosite vrstu tkanine za koju
+                        želite da nadjete najodgovarajući prašak kako bi ona ostala sveža, očuvana i blistava. </small>
+                </div>
+                <div class="form-group laundry-step"> <label class="h4"
+                           for="sadrzajTkanine"> Unesite procentualni sadržaj tkanine u komadu odeće </label> <input
+                           class="form-control"
+                           type="number"
+                           min="0"
+                           max="100"
+                           step="5"
+                           name="sadrzajTkanine"
+                           id="sadrzajTkanine"
+                           required
+                           placeholder="Procentualni sadržaj tkanine u komadu odeće"> <small class="form-text"> Ovde
+                        unosite količinu tkanine koja je sadržana u komadu odeće, jer na različite količine tkanina
+                        utiču različite količine praška. </small> </div>
+                <div class="form-group laundry-step"> <label class="h4"
+                           for="vrstaOdece"> Unesite vrstu komada odeće </label> <input class="form-control"
+                           type="text"
+                           name="vrstaOdece"
+                           id="vrstaOdece"
+                           placeholder="Vrsta komada odeće"> <small class="form-text"> Ovde unosite vrstu komada odeće
+                        koji sadrži tkaninu koju želite da tretirate najpogodnijim praškom kako bi ostao uvek uz Vas.
+                    </small> </div>
+                <div class="form-group laundry-step"> <label class="h4"
+                           for="lokacija"> Unesite grad u kojem živite </label> <input class="form-control"
+                           type="text"
+                           name="lokacija"
+                           id="lokacija"
+                           placeholder="Grad"
+                           required> <small class="form-text"> Ovde unosite grad u kojem živite kako bi prikazali
+                        proizvodi na prodajnim mestima u Vašem gradu. </small> </div>
+                <div class="form-group laundry-step">
+                    <p class="error-message"
+                       id="error"></p> <button class="btn btn-primary"
+                            id="submit"> Završi </button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="product-list d-flex flex-wrap justify-content-center align-items-center flex-grow-1 p-2"
+                 id="product-list"> </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="back-to-top d-flex flex-column justify-content-center align-items-center"
+                     onclick="window.scrollTo(0,0);"> <span class="text-black"> <i class="fas fa-angle-up fa-6x "></i>
+                    </span>
+                    <h3>Na vrh</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/main.06ed658c.js"></script>
+</body>
+
+</html>
